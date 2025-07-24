@@ -5,7 +5,8 @@ c=float(input('Qual o valor investido? '))
 i=int(input('Qual a taxa? ')) 
 t=int(input('Por quanto tempo? '))
 
-período= np.arange(0,t+1) montante= c*(1+i)**período
+período= np.arange(0,t+1) 
+montante= c*(1+i)**período
 
 plt.figure(figsize=(10,6)) 
 plt.plot(período,montante,color='blue', marker='o',linestyle='-',label='juros compostos')
