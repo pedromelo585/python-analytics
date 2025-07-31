@@ -3,7 +3,7 @@ from pandas import DataFrame
 import matplotlib.pyplot as plt
 
 dados = {'Nome': ['Pedro','Marcella','Ana','Cristiano','Roberto'],
-        'Idade': [22, 28, 10, 30, 41],
+        'Idade': [22, 28, 36, 30, 41],
         'Profissão': ['Analista','Nutricionista','Professora','Engenheiro','Administrador'],
         'País': ['Brasil','EUA','México','Uruguai','Portugal'],
         'Peso(KG)': [65, 50, 54, 71, 88]}
