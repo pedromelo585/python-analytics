@@ -1,0 +1,35 @@
+import pandas as pd
+from pandas import DataFrame
+import matplotlib.pyplot as plt
+
+dados = {'Nome': ['Pedro','Marcella','Ana','Cristiano','Roberto'],
+        'Idade': [22, 28, 10, 30, 41],
+        'Profissão': ['Analista','Nutricionista','Professora','Engenheiro','Administrador'],
+        'País': ['Brasil','EUA','México','Uruguai','Portugal'],
+        'Peso(KG)': [65, 50, 54, 71, 88]}
+df = pd.DataFrame(dados)
+print(df,'\n')
+
+print('Dados estatísticos:')
+print(df.describe(),'\n')
+
+print('Retornar linhas e colunas específicas:')
+print(df.iloc[1,[0,2]],'\n')
+
+print('Adicionar nova coluna:')
+
+df['Altura']=0
+print(df,'\n')
+
+print('Verificar o tipo do objeto:')
+
+print(type(df),'\n')
+
+#Gráfico
+plt.figure(figsize=(8,4))
+graph_sort = df.sort_values(by='Idade')
+plt.bar(graph_sort['Nome'],graph_sort['Idade'])
+plt.xlabel('nome')
+plt.ylabel('idade')
+plt.title('Gráfico do Dataframe')
+plt.show()
